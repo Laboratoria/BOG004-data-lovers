@@ -30,7 +30,7 @@ export default {
         w: 48,
         h: 48
       },
-      tags: ["Fighter", "Tank"],
+      tags: ["Fighter", "Tank", "Shurima"],
       partype: "BloodWell",
       stats: {
         hp: 537.8,
@@ -60,7 +60,7 @@ export default {
       id: "Ahri",
       key: "103",
       name: "Ahri",
-      title: "the Nine-Tailed Fox",
+      title: "The Nine-Tailed Fox",
       img:
         "https://www.masterypoints.com/assets/img/lol/champion_icons/Ahri.png",
       splash:

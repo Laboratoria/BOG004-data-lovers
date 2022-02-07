@@ -7,8 +7,77 @@
   </head>
   <body>
     <div id="root">
+      <section id="Pagina de inicio">
 
-    
+        <div id="logo"><img src="" alt="riot logo"></div>
+
+        <div id="Btns">
+          <button id="campeones" class="btn">DESCUBRIR NUEVOS CAMPEONES</button>
+          <button id="jugar" class="btn">JUGAR AHORA</button>
+        </div>
+      </section>
+
+      <section id="landingPage">
+        <div id="barrita" class="barrita">
+          <img src="" alt="riot logo">
+        </div>
+        
+        <div id="barritaAbajo" class="barrita">
+          <input type="text" class="barraDeBusqueda" placeholder="Buscar">
+          <a href="">ASESINO</a>
+          <a href="">LUCHADOR</a>
+          <a href="">MAGO</a>
+          <a href="">TIRADOR</a>
+          <a href="">APOYO</a>
+          <a href="">TANQUE</a>
+          <select name="reinos" id="regiones">
+            <option selected value="0"> Escoge una region</option>
+            <option value="1">Aguasturbias</option>
+            <option value="2">Ciudad de Bandle</option>
+            <option value="3">Demacia</option>
+            <option value="4">El fréljord</option>
+            <option value="5">El vacío</option>
+            <option value="6">Islas de las sombras</option>
+            <option value="7">Ixtal</option>
+            <option value="8">Jonia</option>
+            <option value="9">Noxus</option>
+            <option value="10">Piltóver</option>
+            <option value="11">Shurima</option>
+            <option value="12">Targón</option>
+            <option value="13">Zaun</option>
+          </select>
+        </div>
+
+        <div id="cartas" class="cartitas">
+
+        </div>
+
+      </section>
+
+      <section class="mostrarInf">
+
+        <div class="nombreCampeon" id="nombreCampeon">
+          <p class="nombre"></p>
+          <p class="titulo"></p>
+        </div>
+
+        <div class="centro" id="centro">
+
+          <p id="imgCampeon"></p>
+          <p id="descripcionCamp"></p>
+
+        </div>
+
+        <div class="stats" id="stats">
+
+          <p id="tituloStats"></p>
+          <p id="info"></p>
+
+        </div>
+
+      </section>
+
+
     </div>
     <script src="main.js" type="module"></script>
   </body>
