@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+      }
+  
+  body {
+    background: #192537;
+    text-align: center;
+  }
+
+  h1{
+    font-family: "beaufortforlol";
+    color: #C4C4C4;
+}
+ p{
+    font-family: "beaufortforlol";
+    color: #C4C4C4;   
+}
+  h2 {
+    font-family: "beaufortforlol";
+    color: rgb(245, 78, 203);
+}
+
+@font-face {
+    font-family:"beaufortforlol";
+    src: url(Beaufort.ttf);
+}
+
+button {
+    display: inline;
+    width:auto;
+    padding: 0.8rem;
+    border-style:groove;
+    border-shadow: rgb(85, 113, 116);
+    border-radius:11px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin: 0;
+    background: #D3C9DB;
+    color:rgb(20, 18, 18);
+    margin: 50px auto;
+
+  }
+  button:hover{
+    background-color: turquoise ;
+  }
