@@ -23,7 +23,6 @@ header{
     background-color: #FFD2AB;
 }
 
-
 .menu{
     display: flex;
     flex-direction: row;
@@ -35,17 +34,18 @@ header{
 
 .menu a{
     text-decoration: none;
-    margin-top: 1em;
-    font-size: 20px;
+    margin-top: 0.85em;
+    font-size: 22px;
     padding: auto;
     color: #325C59;
 }
 
 @keyframes galeriaimg{
-    0%{background-image: url('https://www.indiewire.com/wp-content/uploads/2020/09/Screen-Shot-2020-09-22-at-8.42.54-AM.png?resize=800,418');}
-    35%{background-image: url('https://i0.wp.com/hipertextual.com/wp-content/uploads/2016/02/Mi-vecino-Totoro.jpeg?w=1600&ssl=1');}
-    75%{background-image: url('https://i0.wp.com/hipertextual.com/wp-content/uploads/2016/02/Mi-vecino-Totoro.jpeg?w=1600&ssl=1');}
-    100%{background-image: url('https://japonandmore.com/wp-content/uploads/2017/11/grave-of-the-fireflies.jpg');}
+   
+    0%{background-image: url('https://i0.wp.com/hipertextual.com/wp-content/uploads/2016/02/Mi-vecino-Totoro.jpeg?w=1600&ssl=1');}
+    60%{background-image: url('https://www.indiewire.com/wp-content/uploads/2020/09/Screen-Shot-2020-09-22-at-8.42.54-AM.png?resize=800,418');}
+    75%{background-image: url('https://japonandmore.com/wp-content/uploads/2017/11/grave-of-the-fireflies.jpg');}
+    100%{background-image: url('https://i0.wp.com/hipertextual.com/wp-content/uploads/2016/02/Mi-vecino-Totoro.jpeg?w=1600&ssl=1');}
 
 }
 
@@ -53,10 +53,11 @@ header{
     width: 100%;
     height: 700px;
     background-size:cover;
+    background-repeat:no-repeat;
+    background-position-x: center;
     opacity: 80%;
-
     animation-name: galeriaimg;
-    animation-duration: 3s; 
+    animation-duration: 10s; 
     animation-iteration-count: infinite;
 }
 
@@ -76,42 +77,46 @@ header{
 
 .resumen{
     display: flex;
-    flex-direction:row;
-    padding: 5em;
-    background-color: #E1D4D4
-    ;
-    opacity: 0.8;
-    border-radius: 5% 5% 0 0;
+    flex-wrap: wrap;
+    padding: 5%;
+    background-color: #E1D4D4;
+    opacity: 0.8; 
+    justify-content: space-around;
 }
 
 .texto-resumen{
-    width: 80%;
-    font-size: 30px;
+    max-width: 450px;
+    font-size: 1.3rem;
     text-align: justify;
+    flex-wrap:nowrap;
+    margin: 0 1em;
 }
 
 .texto-resumen h1 {
-    padding-bottom: 2em;
+    padding-bottom: 2rem;
     color: #325C59;
+    text-align: center;
 }
 
-.texto-resumen p{
-    margin: 0 1em;
+.logo-principal{
+    max-width: 500px;
+    padding: 3% 0 0 0;
 }
+
 .logo-principal img{
-    width: 90%;
-    max-width: 500em;
-    margin: 5em ;
+    max-width: 100%;
 }
 
 .texto-footer{
     background-color: #FFD2AB;
     height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .texto-footer p{
     text-align: center;
-    padding: 1.5em;
     color: #325C59;
 }
 
@@ -127,3 +132,20 @@ header{
     color: rgb(50, 92, 89);
 }
 
+.redes-sociales {
+    height: 200px;
+    width: 65px;
+    background-color: rgba(252, 236,222, 0.6);
+    position: fixed;
+    bottom: 100px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.icono-redes{
+    color: rgb(50, 92, 89);
+    width: 35px;
+}
