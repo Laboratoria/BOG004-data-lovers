@@ -1,27 +1,16 @@
-import information from './data/lol/lol.js';
+import champs from './data/lol/lol.js';
+import {filterData} from './data.js';
 
-const barraBuscador = document.getElementById("buscador");
-const boton = document.getElementById("boton");
+const champions = champs.data;
+let Filteredchampions = champs.data;
 
-const filtrar = ()=>{
-
-  resultado.innerHTML = ' ';
-  const campeon = barraBuscador.value.toLowerCase();
-  console.log(information.data);
-  let textoFinal = '';
-
-  for(let champions in information.data){
-    let text = champions.toLowerCase();
-    if(text === campeon){
-      textoFinal += `<p id=\"resultado\">${champions} : ${information.data[champions].title }<br>${information.data[champions].blurb}</p><img src="${information.data[champions].splash}" alt="campeon" width="500" height="600"><br>`;
-     }
-   }
-
-   if(textoFinal === ''){
-    textoFinal += `producto no encotrado`;
-   }
-   resultado.innerHTML = textoFinal;
-
-  }
-
-boton.addEventListener("click", filtrar);
+document.getElementById("Assassin").addEventListener("click", ()=>{
+    const condition = "Assassin";
+    Filteredchampions = (filterData(Object.values(champions), condition));
+    for(let i = 0; i < Filteredchampions.length; i++){
+        document.getElementById("cartas").innerHTML = Filteredchampions[i].tags;
+    };
+    console.log(Filteredchampions);
+  });
+  
+console.log(Filteredchampions);

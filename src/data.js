@@ -1,9 +1,12 @@
 // estas funciones son de ejemplo
 
-export const example = () => {
-  return 'example';
-};
+export const filterData = (data, condition) => {
+  const arrFiltered = data.filter(eachChampion => eachChampion.tags.includes(condition));
+  return arrFiltered;
+}; 
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+
+
+//export const anotherExample = () => {
+  //return 'OMG';
+//};
