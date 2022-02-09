@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Questrial', sans-serif;
+    background-color: #FCECDE;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1170px;
+    margin: auto;
+}
+
+header{
+    width: 100%;
+    height: 60px;
+    background-color: #FFD2AB;
+}
+
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: center;
+    align-content: center; 
+}
+
+.menu a{
+    text-decoration: none;
+    margin-top: 1em;
+    font-size: 20px;
+    padding: auto;
+    color: #325C59;
+}
+
+@keyframes galeriaimg{
+    0%{background-image: url('https://www.indiewire.com/wp-content/uploads/2020/09/Screen-Shot-2020-09-22-at-8.42.54-AM.png?resize=800,418');}
+    35%{background-image: url('https://i0.wp.com/hipertextual.com/wp-content/uploads/2016/02/Mi-vecino-Totoro.jpeg?w=1600&ssl=1');}
+    75%{background-image: url('https://i0.wp.com/hipertextual.com/wp-content/uploads/2016/02/Mi-vecino-Totoro.jpeg?w=1600&ssl=1');}
+    100%{background-image: url('https://japonandmore.com/wp-content/uploads/2017/11/grave-of-the-fireflies.jpg');}
+
+}
+
+.banner{
+    width: 100%;
+    height: 700px;
+    background-size:cover;
+    opacity: 80%;
+
+    animation-name: galeriaimg;
+    animation-duration: 3s; 
+    animation-iteration-count: infinite;
+}
+
+.logo-banner{
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 100%;
+}
+
+.logo-banner img{
+    width: 40%;
+    margin-top: 0;
+    background-color: rgba(209,219,189, 0.6) ;
+}
+
+.resumen{
+    display: flex;
+    flex-direction:row;
+    padding: 5em;
+    background-color: #E1D4D4
+    ;
+    opacity: 0.8;
+    border-radius: 5% 5% 0 0;
+}
+
+.texto-resumen{
+    width: 80%;
+    font-size: 30px;
+    text-align: justify;
+}
+
+.texto-resumen h1 {
+    padding-bottom: 2em;
+    color: #325C59;
+}
+
+.texto-resumen p{
+    margin: 0 1em;
+}
+.logo-principal img{
+    width: 90%;
+    max-width: 500em;
+    margin: 5em ;
+}
+
+.texto-footer{
+    background-color: #FFD2AB;
+    height: 60px;
+}
+
+.texto-footer p{
+    text-align: center;
+    padding: 1.5em;
+    color: #325C59;
+}
+
+.fuenteTitulo {
+    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+    size: 10px;
+    color: rgb(50, 92, 89);
+}
+
+.fuenteLineaT {
+    font-family: 'Questrial', sans-serif;
+    size: 10px;
+    color: rgb(50, 92, 89);
+}
+
