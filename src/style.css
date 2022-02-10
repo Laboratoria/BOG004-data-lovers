@@ -1,0 +1,63 @@
+body{
+    margin: 0%;
+    overflow: hidden;
+}
+
+header{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: black;
+    color: white;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    
+}
+h1{
+    text-align: center;
+    color: white;
+}
+
+.video{
+    position: absolute;
+    top:0%;
+    left: 0%; 
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    opacity: 0.95;
+
+}
+#pag1{
+    display: block;
+}
+
+#pag2{
+    display: none;
+}
+
+#pag3{
+    display: none;
+}
+
+footer{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: black;
+    color: white;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+}
+
+
+
+
