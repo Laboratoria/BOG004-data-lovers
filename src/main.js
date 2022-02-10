@@ -1,7 +1,5 @@
 
 import data from './data/lol/lol.js';
-/*import { example } from './data.js';
-/*let lolData = lol.data;*/
 let dataLOL = data.data
 console.log('manipular', dataLOL);
 

@@ -6,3 +6,4 @@ export const filtar = (data) => {
 export const anotherExample = () => {
   return 'OMG';
 };
+
