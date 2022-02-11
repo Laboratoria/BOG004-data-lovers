@@ -10,11 +10,32 @@ fetch('./data/ghibli/ghibli.json')
     })
 
     function iterarPelicula (peliculas){
-        peliculas.films.forEach(pelicula => document.getElementById('poster').innerHTML =  (`<img src="${pelicula.poster}" alt="poster">`))
-        peliculas.films.forEach(pelicula => document.getElementById('title').innerHTML =  (` <h1>${pelicula.title}</h1>`))
-        peliculas.films.forEach(pelicula => document.getElementById('description').innerHTML =  (` <h1>${pelicula.description}</h1>`))
-        peliculas.films.forEach(pelicula => document.getElementById('release_date').innerHTML =  (` <h1>${pelicula.release_date}</h1>`))
+        const {films} = peliculas;
+        const lineaTiempoSection = document.getElementById('lineatiempo');
+        
+        let HTMLfinal = '';
+
+        films.forEach(film => { 
+            HTMLfinal += `
+            <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" id="poster">
+                            <img src="${film.poster}" />
+                        </div>
+                        <div class="flip-card-back">
+                            <h1 id="title">${film.title}</h1> 
+                            <p id="release_date">${film.release_date}</p> 
+                            <p class="description" id="description">${film.description}</p>
+                        </div>
+                    </div>
+                </div>
+            `
+        });
+
+        lineaTiempoSection.innerHTML = HTMLfinal; 
     }
 
-
-    // peliculas.forEach(pelicula => console.log(pelicula));
+    // function mostrarAnimaciones (){
+    //     document.getElementById('Home').style.display = 'none';
+    //     document.getElementById('lineatiempo').style.display = 'block'
+    // }
