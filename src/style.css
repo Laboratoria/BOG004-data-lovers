@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111224;   
+}
+
+.header {
+    display: flex;
+    background-color: #0d0e1d;   
+    height: 6em;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.4em solid #A6751B;
+    position: fixed;
+    width: 100%;
+}
+
+
+h1 {
+    padding-left: 2em;
+    color: aliceblue;
+    font-family: 'Cinzel', serif;
+    font-size: 1.5em;
+    flex-basis: 40%;
+    /*border: 1px solid red;*/
+}
+
+.contenedorLogo {
+    display: flex;
+    justify-content: center;
+    flex-basis: 20%;
+    /*border: 1px solid red;*/
+
+}
+
+.enlace {
+    display: flex;
+    flex-basis: 40%;
+    justify-content: flex-end;
+    padding-right: 3em;
+    /*border: 1px solid red;*/
+}
+
+.enlace a {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5em;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.reseña {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 7em 0 7em;
+
+     
+    
+    
+}
+
+.reseña h2 {
+    font-size: 3em;
+    color: aliceblue;
+    font-family: 'Cinzel', serif;
+    margin-top: 2em;
+    margin-bottom: 0;
+}
+
+.textoReseña {
+    text-align: center;
+    font-size: 1.7em;
+    color: aliceblue;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+
+
+
+
+
+
+.botones {
+    display: flex;
+    justify-content: center;
+}
+
+.campeones {
+    border-radius: 5px;
+    padding: 7px 7px 7px 7px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.top10 {
+    border-radius: 5px;
+    padding: 7px 7px 7px 7px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
