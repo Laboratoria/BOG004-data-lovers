@@ -4,6 +4,13 @@ export const example = () => {
   return 'example';
 };
 
-export const anotherExample = () => {
-  return 'OMG';
+export const findFilms = (titlesFilms) => {
+  if(titlesFilms === document.getElementById('filtro').value){
+    return true;
+  }else{
+    return false
+  }
+  
 };
+
+

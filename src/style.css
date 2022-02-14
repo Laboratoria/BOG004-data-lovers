@@ -40,6 +40,13 @@ header{
     color: #325C59;
 }
 
+.menu input{
+    height: 30px;
+    border-radius: 25px;
+    justify-content: left;
+    margin-top: 1em;
+}
+
 @keyframes galeriaimg{
    
     0%{background-image: url('https://i0.wp.com/hipertextual.com/wp-content/uploads/2016/02/Mi-vecino-Totoro.jpeg?w=1600&ssl=1');}
@@ -150,15 +157,12 @@ header{
     width: 35px;
 }
 
-#lineatiempo{
+#animaciones{
     display: flex;
-    flex-direction: column;    
+    flex-direction: row;    
     flex-wrap: wrap; 
     justify-content: center;
-    align-content: space-around;
-    height: 2500px;
 }
-
 .flip-card {
     background-color: transparent;
     width: 300px;
