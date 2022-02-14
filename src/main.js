@@ -10,34 +10,17 @@ function hidepages() {
   document.getElementById("pag3").style.display = "none";
 }
 //Asi comienzan las funciones de la data
-
+//Filtro por asesinos
 document.getElementById("btnKiller").addEventListener("click", filterByKey("Assassin"))
 
+//Mostrar en la pagina los filtros
 let bringForm = document.getElementById("role");
 
-document.getElementById("btnAll").addEventListener("click", () => {
-  dataLOL.forEach((champion) => {
+const showByKey = (key) => {
+key.forEach((champion) => {
     const name = champion.name;
     console.log(name);
     bringForm.innerHTML += `<li>${name}</li>`;
   });
-}
-);
+document.getElementById("btnAll").addEventListener("click", showByKey("Todos"));
 
-
-
- 
-
-
-
-//import filterChampion from './data.js';
-
-/*document.getElementById("btnAll").addEventListener("click", seeChampions)
-
-function seeChampions() {
-    let nameChampion = document.getElementById("nada").innerHTML = "Su campeon es " + filterChampion();
-    //createTag.appendChild(nameChampion);
-    console.log (nameChampion);
-    return nameChampion;
-}
-//filterChampion()*/
