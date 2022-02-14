@@ -11,7 +11,7 @@ fetch('./data/ghibli/ghibli.json')
 
     function iterarPelicula (peliculas){
         const {films} = peliculas;
-        const lineaTiempoSection = document.getElementById('lineatiempo');
+        const lineaTiempoSection = document.getElementById('animaciones');
         
         let HTMLfinal = '';
 
@@ -31,11 +31,16 @@ fetch('./data/ghibli/ghibli.json')
                 </div>
             `
         });
-
         lineaTiempoSection.innerHTML = HTMLfinal; 
     }
 
-    // function mostrarAnimaciones (){
-    //     document.getElementById('Home').style.display = 'none';
-    //     document.getElementById('lineatiempo').style.display = 'block'
-    // }
+
+    let galeria = document.getElementById('galery');
+    document.getElementById('animaciones').style.display = 'none';
+
+    function mostrarAnimaciones (){
+        document.getElementById('animaciones').style.display = 'block';
+        document.getElementById('Home').style.display = 'none';   
+    }
+
+    galeria.addEventListener('click', mostrarAnimaciones)
