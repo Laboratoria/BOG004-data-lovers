@@ -1,15 +1,15 @@
 import data from './data/lol/lol.js';
 let dataLOL = Object.values(data.data);
 
-const filterByKey = (key) => {
-  const arrayFilter = dataLOL.filter(champion => champion.tags.includes(key));
-  console.log("prueba", arrayFilter);
+const filterByKey = (role) => {
+  const arrayFilter = dataLOL.filter(champion => champion.tags.includes(role));
+  /*console.log("prueba", arrayFilter);*/
   return arrayFilter;
   
 }
 
-
 export default filterByKey;
+/*export default filterByName;
 
 
 
