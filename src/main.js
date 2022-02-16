@@ -24,7 +24,7 @@ const showInScreen = (showChampion) => {
     // CREANDO CON LITERAL TEMPLATE
     card.innerHTML = `
       <h3>${champion.name}</h3>
-      <img src = ${image}>
+      <img class = "image" src = ${image}>
       <h4>${champion.title}</h4>
     `
     bringForm.appendChild(card);

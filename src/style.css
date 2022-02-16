@@ -14,7 +14,6 @@ header{
     padding-left: 1em;
     padding-right: 1em;
     width: 100%; 
-    border: 1px solid black;
 }
 
 h1 img{
@@ -59,10 +58,53 @@ nav ul li a {
 
 #pag2{
     display: none;
-    text-align: center;
-    
+    text-align: center; 
+}
+.btnRoles{
+    padding-top: 2em;
+}
+.btnRoles input{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.493);
+    border-radius: 0.5em;
+    padding: 0.3em 0.5em ;
 }
 
+#order{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.493);
+    border-radius: 0.5em;
+    padding: 0.3em 0.5em ;
+    text-align: center;
+}
+
+#resultFilter{
+    padding: 3em;
+}
+.cardChampion{
+    display: inline-flex;
+    flex-direction: column;
+    border: 0.5em outset;
+    background-color: rgb(168, 167, 167);
+    width: 25em;
+    height: 25em;
+    padding: 1em;
+    margin: 1em;
+}
+
+.cardChampion h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5em;
+}
+
+.cardChampion h4{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.3em;
+}
 
 #pag3{
     display: none;
