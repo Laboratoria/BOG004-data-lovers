@@ -43,3 +43,24 @@ fetch('./data/ghibli/ghibli.json')
     }
 
     galeria.addEventListener('click', mostrarAnimaciones) 
+
+
+
+document.getElementById("boton-filtrar").addEventListener("click",traerNombreInput)
+
+function traerNombreInput() {
+    event.preventDefault();
+    const traerDatosBusqueda = document.getElementById("input-filtro");
+    // eslint-disable-next-line no-console
+    
+    // eslint-disable-next-line no-console
+    console.log(traerDatosBusqueda);
+    const datosBusqueda = traerDatosBusqueda.value
+
+    const filmsFiltradas = peliculas.filter(pelicula => pelicula.title == datosBusqueda);
+    
+    // eslint-disable-next-line no-console
+    console.log (filmsFiltradas);
+
+}
+    
