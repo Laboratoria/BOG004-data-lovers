@@ -1,13 +1,14 @@
 body{
     margin: 0%;
     /*overflow: hidden;*/
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #ACA1C6;
+    font-family: 'Cinzel', serif;
+    background-image: url("./img/fondo.jpg");
 }
 
-header{
+header{ 
     display: flex;
     flex-flow: row wrap;
+    gap: 0.5em;
     justify-content: space-evenly;
     align-items: center;
     color: white;
@@ -24,9 +25,9 @@ h1 img{
 
 nav ul li{
     display: inline-block;
-    /*border: 1px solid black;*/
+    border: 0.2em outset  #2788be;
     border-radius: 1em;
-    background-color: rgba(0, 0, 0, 0.493);
+    background-color: #111224;
     padding: 0.6em;
 }
 nav ul{
@@ -64,20 +65,22 @@ nav ul li a {
     padding-top: 2em;
 }
 .btnRoles input{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Cinzel', serif;
     font-size: 1.2em;
     color: white;
-    background-color: rgba(0, 0, 0, 0.493);
+    background-color: #111224;
     border-radius: 0.5em;
+    border: 0.1em outset  #2788be;
     padding: 0.3em 0.5em ;
 }
 
 #order{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Cinzel', serif;
     font-size: 1.2em;
     color: white;
-    background-color: rgba(0, 0, 0, 0.493);
+    background-color: #111224;
     border-radius: 0.5em;
+    border: 0.1em outset  #2788be;
     padding: 0.3em 0.5em ;
     text-align: center;
 }
@@ -88,8 +91,9 @@ nav ul li a {
 .cardChampion{
     display: inline-flex;
     flex-direction: column;
-    border: 0.5em outset;
-    background-color: rgb(168, 167, 167);
+    border: 0.2em solid #2788be;
+    border-radius: 3em;
+    background-color:  #111224;
     width: 25em;
     height: 25em;
     padding: 1em;
@@ -97,13 +101,18 @@ nav ul li a {
 }
 
 .cardChampion h3{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Cinzel', serif;
     font-size: 1.5em;
+    color: white;
 }
 
 .cardChampion h4{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Cinzel', serif;
     font-size: 1.3em;
+    color: white;
+}
+.cardChampion img{
+    border-radius: 0.5em;
 }
 
 #pag3{
