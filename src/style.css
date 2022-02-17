@@ -23,6 +23,8 @@ header{
     background-color: #FFD2AB;
 }
 
+
+/* Barra de navegacion */
 .menu{
     display: flex;
     flex-direction: row;
@@ -40,6 +42,9 @@ header{
     color: #325C59;
     cursor: pointer;
 }
+
+/* Pantalla 1 */
+/* Banner principal */
 
 @keyframes galeriaimg{
    
@@ -76,6 +81,7 @@ header{
     background-color: rgba(209,219,189, 0.6) ;
 }
 
+/* Seccion de resumen */
 .resumen{
     display: flex;
     flex-wrap: wrap;
@@ -108,31 +114,7 @@ header{
     max-width: 100%;
 }
 
-.texto-footer{
-    background-color: #FFD2AB;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.texto-footer p{
-    text-align: center;
-    color: #325C59;
-}
-
-.fuenteTitulo {
-    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-    size: 10px;
-    color: rgb(50, 92, 89);
-}
-
-.fuenteLineaT {
-    font-family: 'Questrial', sans-serif;
-    size: 10px;
-    color: rgb(50, 92, 89);
-}
-
+/* Panel Redes Sociales */
 .redes-sociales {
     height: 200px;
     width: 65px;
@@ -150,6 +132,8 @@ header{
     color: rgb(50, 92, 89);
     width: 35px;
 }
+
+/* Pantalla 2 */
 
 #galeria-animaciones{
     display: flex;
@@ -187,6 +171,8 @@ header{
     flex-wrap: wrap; 
     justify-content: center;
 }
+
+/* Tarjetas de animaciones */
 .flip-card {
     background-color: transparent;
     width: 300px;
@@ -269,6 +255,7 @@ header{
     padding-right: 20px;
 }
 
+/* Panel Ordenar */
 .filtros-busqueda {
     height: 200px;
     width: 65px;
@@ -286,3 +273,18 @@ header{
     width: 30px;
 }
 
+
+
+/* Pie de página */
+.texto-footer{
+    background-color: #FFD2AB;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-footer p{
+    text-align: center;
+    color: #325C59;
+}
