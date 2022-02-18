@@ -1,6 +1,25 @@
+//Imports
+import {filtrarPeliculas, organizarPeliculasAZ, peliculasxAño} from './data.js'
+
+
+//Variables y constantes
 let peliculas = [];
-// // eslint-disable-next-line no-debugger
-// debugger
+const lineaTiempoSection = document.getElementById('animaciones');
+let galeria = document.getElementById('galery');
+document.getElementById('galeria-animaciones').style.display = 'none';
+let btn_filtrar = document.getElementById("boton-filtrar");
+let btn_AZ = document.getElementById("ordenar-az");
+let btn_Cronologia = document.getElementById("ordenar-fecha");
+
+
+
+//Eventos
+galeria.addEventListener('click', mostrarAnimaciones);
+btn_filtrar.addEventListener("click",traerNombreInput);
+btn_AZ.addEventListener("click",OrdenarAlfabeticamenteAaZ); 
+btn_Cronologia.addEventListener("click",OrdenarCronologicamente);
+
+
 fetch('./data/ghibli/ghibli.json')
     .then(response => response.json())
     .then(data => peliculas = data.films) 
@@ -9,9 +28,10 @@ fetch('./data/ghibli/ghibli.json')
         throw(error);
     })
 
+    
+
+//Funciones
     function iterarPelicula (peliculas){
-        const lineaTiempoSection = document.getElementById('animaciones');
-        
         let HTMLfinal = '';
 
         peliculas.forEach(pelicula => { 
@@ -23,7 +43,7 @@ fetch('./data/ghibli/ghibli.json')
                         </div>
                         <div class="flip-card-back">
                             <h1 id="title">${pelicula.title}</h1> 
-                            <p id="release_date">${pelicula.release_date}</p> 
+                            <p id="rel ease_date">${pelicula.release_date}</p> 
                             <p class="description" id="description">${pelicula.description}</p>
                         </div>
                     </div>
@@ -33,34 +53,30 @@ fetch('./data/ghibli/ghibli.json')
         lineaTiempoSection.innerHTML = HTMLfinal; 
     }
 
-
-    let galeria = document.getElementById('galery');
-    document.getElementById('galeria-animaciones').style.display = 'none';
-
     function mostrarAnimaciones (){
         document.getElementById('galeria-animaciones').style.display = 'flex';
         document.getElementById('Home').style.display = 'none';   
     }
 
-    galeria.addEventListener('click', mostrarAnimaciones) 
+    function traerNombreInput(event) {
+        event.preventDefault();
+        const datosBusqueda = document.getElementById("input-filtro").value;
+        const filmsFiltradas = filtrarPeliculas(peliculas, datosBusqueda)
+        iterarPelicula(filmsFiltradas);
+        
+    }
 
-
-
-document.getElementById("boton-filtrar").addEventListener("click",traerNombreInput)
-
-function traerNombreInput() {
+    function OrdenarAlfabeticamenteAaZ(event){
     event.preventDefault();
-    const traerDatosBusqueda = document.getElementById("input-filtro");
-    // eslint-disable-next-line no-console
-    
-    // eslint-disable-next-line no-console
-    console.log(traerDatosBusqueda);
-    const datosBusqueda = traerDatosBusqueda.value
+        const peliculasOrdenadasAaZ= organizarPeliculasAZ(peliculas)
+        iterarPelicula(peliculasOrdenadasAaZ)
+    }
 
-    const filmsFiltradas = peliculas.filter(pelicula => pelicula.title == datosBusqueda);
-    
-    // eslint-disable-next-line no-console
-    console.log (filmsFiltradas);
+    function OrdenarCronologicamente(event){
+    event.preventDefault();
+        
+        let peliculasOrdenadasxAño = peliculasxAño(peliculas)
+        iterarPelicula(peliculasOrdenadasxAño)
+    }
 
-}
     
