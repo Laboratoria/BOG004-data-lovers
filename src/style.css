@@ -126,6 +126,7 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    z-index: 5;
 }
 
 .icono-redes{
@@ -274,6 +275,127 @@ header{
 }
 
 
+/* Sección pelicula individual */
+
+#poster-descripcion{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4%;
+    
+    opacity: 0.8; 
+    justify-content: space-evenly;
+}
+
+.poster-principal{
+  display: flex;
+  justify-content: center;
+}
+
+.poster-principal img{
+    display: flex;
+    justify-content: center;
+    max-width: 50%;
+    border-radius: 30px;
+    border: 1px solid #325C59;
+    width: 100%;
+    height: 400px;
+}
+
+.texto-descripcion{
+    display: flex;
+    max-width: 450px;
+    font-size: 1rem;
+    flex-direction: column;
+    background-color: #E1D4D4;
+    border-radius: 10px;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+.texto-descripcion li {
+    padding-bottom: 2rem;
+    color: #325C59;
+    text-align:left;
+    font-weight:bolder;
+    display: flex;
+
+}
+/* Sección pelicula individual botones de busqueda*/
+.btn-location-vehicles-personajes{
+display: flex;
+justify-content: space-evenly;
+padding: 20px;
+}
+
+.button {
+    
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family:'Questrial', sans-serif;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #325C59;
+}
+
+.button1:hover {
+    background-color: #325C59;
+    color: white;
+}
+
+/* Carrusel*/
+
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.img-slider__container-1 {
+    display: flex;
+    column-gap:20px;
+    width: 100%;
+    overflow-x: auto;
+    justify-content: start;
+    align-items: center;
+    padding: 70px;
+    overflow-y:hidden;
+    height: 185px;
+    }
+    .img-items {
+        width: 100%;
+    }
+    .img-active {
+        transform: translateX(-100%);
+    }
+
+.img-carrusel{
+    width: 140px;
+    height: 140px;
+    border-radius: 110px;
+    padding: 10px;
+    transition: .5s ease-in-out;
+}
+
+.img-carrusel:hover{
+    width: 140px;
+    height: 140px;
+    border-radius: 110px;
+    position: relative;
+    padding: 0px;
+    transform: scale(1.1);
+}
 
 /* Pie de página */
 .texto-footer{

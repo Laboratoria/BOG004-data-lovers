@@ -31,6 +31,8 @@ fetch('./data/ghibli/ghibli.json')
     
 
 //Funciones
+
+// Iteración y template
     function iterarPelicula (peliculas){
         let HTMLfinal = '';
 
@@ -53,10 +55,13 @@ fetch('./data/ghibli/ghibli.json')
         lineaTiempoSection.innerHTML = HTMLfinal; 
     }
 
+   // Ocultar y mostrar paginas
+
     function mostrarAnimaciones (){
         document.getElementById('galeria-animaciones').style.display = 'flex';
         document.getElementById('Home').style.display = 'none';   
     }
+    //  
 
     function traerNombreInput(event) {
         event.preventDefault();
