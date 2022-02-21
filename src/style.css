@@ -84,36 +84,62 @@ nav ul li a {
     padding: 0.3em 0.5em ;
     text-align: center;
 }
-
-#resultFilter{
-    padding: 3em;
+#cardPrincipal{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
-.cardChampion{
-    display: inline-flex;
-    flex-direction: column;
+
+.flip-card {
+    /*background-color: transparent;*/
+    width: 25em;
+    height: 25em;
+    /*border: 1px solid #f1f1f1;*/
+    perspective: 1000px; 
+    margin: 1em;
+  }
+  
+ 
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     border: 0.2em solid #2788be;
     border-radius: 3em;
     background-color:  #111224;
-    width: 25em;
-    height: 25em;
-    padding: 1em;
-    margin: 1em;
-}
-
-.cardChampion h3{
-    font-family: 'Cinzel', serif;
-    font-size: 1.5em;
     color: white;
-}
-
-.cardChampion h4{
-    font-family: 'Cinzel', serif;
-    font-size: 1.3em;
-    color: white;
-}
-.cardChampion img{
-    border-radius: 0.5em;
-}
+  }
+  
+  .flip-card-front {
+    /*background-color: #bbb;*/
+    /*color: black;*/
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+  }
+  
+  .flip-card-back {
+    /*background-color: dodgerblue;*/
+    /*color: white;*/
+    transform: rotateY(180deg);
+    padding: 0.5em;
+  }
 
 #pag3{
     display: none;
@@ -140,20 +166,14 @@ footer{
 }
 
 @media only screen and (max-width: 768px) {
-    section, footer {
+    .video {
        width: 100%;
+       height: 100%;
    } 
-    header{
-        width: 100%;
-        height: 100%;
-    }
 }
 
 @media only screen and (max-width: 600px) {
-    section, footer {
-        width: 100%;
-    } 
-    header{
+    .video {
         width: 100%;
         height: 100%;
     }
@@ -161,20 +181,14 @@ footer{
  }
 
  @media only screen and (max-width: 992px) {
-    section, footer {
-        width: 100%;
-    } 
-    header{
+    .video {
         width: 100%;
         height: 100%;
     }
  }
 
  @media only screen and (max-width: 1200px) {
-    section, footer {
-        width: 100%;
-    } 
-    header{
+    .video {
         width: 100%;
         height: 100%;
     }
