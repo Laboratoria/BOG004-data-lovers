@@ -1,5 +1,4 @@
 import filterByKey from "./data.js";
-import lol from "./data/lol/lol.js";
 import data from './data/lol/lol.js';
 let dataLOL = Object.values(data.data);
 
@@ -23,9 +22,17 @@ const showInScreen = (showChampion) => {
     card.setAttribute("class", "cardChampion");
     // CREANDO CON LITERAL TEMPLATE
     card.innerHTML = `
-      <h3>${champion.name}</h3>
-      <img class = "image" src = ${image}>
-      <h4>${champion.title}</h4>
+      <div class="contenedorTarjeta"> 
+          <div class="face card"> 
+           <h3>${champion.name}</h3>
+           <img class = "image" src = ${image}>
+           <h4>${champion.title}</h4>
+          </div>
+          <div class="face contenido">
+            <h4>${champion.blurb}</h4>
+          </div>
+      </div>
+
     `
     bringForm.appendChild(card);
   })
@@ -41,7 +48,7 @@ document.getElementById("btnKiller").addEventListener("click", () => {
 
 document.getElementById("btnMagic").addEventListener("click", () => {
   showInScreen(filterByKey("Mage"));
-  
+
 })//Filtro por Magos
 
 document.getElementById("btnFighter").addEventListener("click", () => {
@@ -61,9 +68,9 @@ document.getElementById("btnSupport").addEventListener("click", () => {
 })//Filtro por apoyos 
 
 // CREANDO ETIQUETA POR ETIQUETA
-    /*let showImage = document.createElement("img");
-    showImage.setAttribute("src", image);
-    card.appendChild(showImage);
-    let h3 = document.createElement("h3");
-    h3.innerText = champion.title;
-    card.appendChild(h3);*/
+/*let showImage = document.createElement("img");
+showImage.setAttribute("src", image);
+card.appendChild(showImage);
+let h3 = document.createElement("h3");
+h3.innerText = champion.title;
+card.appendChild(h3);*/

@@ -5,8 +5,24 @@ const filterByKey = (role) => {
   const arrayFilter = dataLOL.filter(champion => champion.tags.includes(role));
   /*console.log("prueba", arrayFilter);*/
   return arrayFilter;
-  
+
 }
+
+
+export const sortChampions = dataLOL.sort((item1, item2) => { 
+  return (item1.name > item2.name) ? -1 : 1
+})
+
+console.log("array reverso", sortChampions);
+
+
+
+
+
+
+
+
+
 
 export default filterByKey;
 /*export default filterByName;
