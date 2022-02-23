@@ -1,8 +1,9 @@
 body{
     margin: 0%;
-    /*overflow: hidden;*/
+    overflow-x: hidden;
     font-family: 'Cinzel', serif;
     background-image: url("./img/fondo.jpg");
+    width: 100%;
 }
 
 header{ 
@@ -12,15 +13,14 @@ header{
     justify-content: space-evenly;
     align-items: center;
     color: white;
-    padding-left: 1em;
-    padding-right: 1em;
     width: 100%; 
 }
 
-h1 img{
-    width: 5em;
-    height: 4em;
+#return {
+    width: 12.5em;
+    height: 11em;
     margin: 0%;
+    padding-top: 0.5em;
 }
 
 nav ul li{
@@ -32,7 +32,8 @@ nav ul li{
 }
 nav ul{
     list-style: none;
-    padding-bottom: 5em;
+    /*padding-bottom: 5em;*/
+    margin: 0%;
     
 }
 nav ul li a {
@@ -43,18 +44,43 @@ nav ul li a {
 
 #pag1{
     display: block;
+    position: relative;
+}
+.containerVideo{
+    overflow-x: hidden;
+    /*position: relative;*/
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 22%, 100% 61%, 70% 86%, 29% 86%, 0 61%, 0 22%);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 22%, 100% 61%, 70% 86%, 29% 86%, 0 61%, 0 22%);
+    border: 1em solid #2788be;
 }
 
 .video{
-    position: absolute;
-    top:0%;
-    left: 0%; 
-    min-width: 100%;
-    min-height: 100%;
-    overflow: hidden;
-    z-index: -1;
+    display: block;
+    z-index: 1;
     opacity: 0.95;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+}
+
+#text{
+    position: absolute;
+    top: 40%;
+    left: 2%;
+    /*z-index: 2;*/
     
+}
+
+#text h4{
+    color: white;
+    font-size: 300%;
+}
+#resume h3{
+    color: white
+}
+
+#resume p{
+    color: white;
 }
 
 #pag2{
@@ -91,16 +117,13 @@ nav ul li a {
 }
 
 .flip-card {
-    /*background-color: transparent;*/
     width: 25em;
     height: 25em;
-    /*border: 1px solid #f1f1f1;*/
     perspective: 1000px; 
     margin: 1em;
   }
-  
  
-  .flip-card-inner {
+  .cardContainer {
     position: relative;
     width: 100%;
     height: 100%;
@@ -110,11 +133,11 @@ nav ul li a {
     
   }
   
-  .flip-card:hover .flip-card-inner {
+  .flip-card:hover .cardContainer {
     transform: rotateY(180deg);
   }
   
-  .flip-card-front, .flip-card-back {
+  .cardFront, .cardBack {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -124,21 +147,25 @@ nav ul li a {
     border-radius: 3em;
     background-color:  #111224;
     color: white;
+    letter-spacing: 2px;
   }
   
-  .flip-card-front {
-    /*background-color: #bbb;*/
-    /*color: black;*/
+  .cardFront {
     display: flex;
     flex-direction: column;
     padding: 0.5em;
   }
   
-  .flip-card-back {
-    /*background-color: dodgerblue;*/
-    /*color: white;*/
+  .cardBack {
     transform: rotateY(180deg);
-    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+  }
+
+  .image{
+      border-radius: 1em;
   }
 
 #pag3{
@@ -170,6 +197,7 @@ footer{
        width: 100%;
        height: 100%;
    } 
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -185,6 +213,7 @@ footer{
         width: 100%;
         height: 100%;
     }
+    
  }
 
  @media only screen and (max-width: 1200px) {
