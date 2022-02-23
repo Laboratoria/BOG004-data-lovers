@@ -1,4 +1,5 @@
-import filterByKey from "./data.js";
+import {sortChampions} from "./data.js";
+import {filterByKey} from "./data.js";
 import data from './data/lol/lol.js';
 let dataLOL = Object.values(data.data);
 
@@ -9,30 +10,32 @@ function hidepages() {
   document.getElementById("pag2").style.display = "block";
   document.getElementById("pag3").style.display = "none";
 }
-//Asi comienzan las funciones de la data
-//Mostrar en la pagina los filtros
 
-let bringForm = document.getElementById("resultFilter");
+//Mostrar en la pagina los filtros y el orden 
+
+let bringForm = document.getElementById("cardPrincipal");
 
 const showInScreen = (showChampion) => {
   bringForm.innerHTML = "";
   showChampion.forEach((champion) => {
     const image = champion.splash;
     let card = document.createElement("div");
-    card.setAttribute("class", "cardChampion");
+    card.setAttribute("class", "cardChampion face");
     // CREANDO CON LITERAL TEMPLATE
     card.innerHTML = `
-      <div class="contenedorTarjeta"> 
-          <div class="face card"> 
-           <h3>${champion.name}</h3>
-           <img class = "image" src = ${image}>
-           <h4>${champion.title}</h4>
-          </div>
-          <div class="face contenido">
-            <h4>${champion.blurb}</h4>
-          </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h3>${champion.name}</h3>
+          <img class = "image" src = ${image}>
+          <h4>${champion.title}</h4>
+        </div>
+        <div class="flip-card-back">
+          <h4>${champion.blurb}</h4>
+        </div>
       </div>
-
+    </div>
+       
     `
     bringForm.appendChild(card);
   })
@@ -43,34 +46,35 @@ document.getElementById("btnAll").addEventListener("click", () => {
 });
 
 document.getElementById("btnKiller").addEventListener("click", () => {
-  showInScreen(filterByKey("Assassin"));
+  showInScreen(filterByKey(dataLOL, "Assassin"));
 })//Filtro por asesinos
 
 document.getElementById("btnMagic").addEventListener("click", () => {
-  showInScreen(filterByKey("Mage"));
-
+  showInScreen(filterByKey(dataLOL, "Mage"));
 })//Filtro por Magos
 
 document.getElementById("btnFighter").addEventListener("click", () => {
-  showInScreen(filterByKey("Fighter"));
+  showInScreen(filterByKey(dataLOL, "Fighter"));
 })//Filtro por Luchadores
 
 document.getElementById("btnMarksman").addEventListener("click", () => {
-  showInScreen(filterByKey("Marksman"));
+  showInScreen(filterByKey(dataLOL, "Marksman"));
 })//Filtro por Tiradores
 
 document.getElementById("btnTank").addEventListener("click", () => {
-  showInScreen(filterByKey("Tank"));
+  showInScreen(filterByKey(dataLOL, "Tank"));
 })//Filtro por Tanques
 
 document.getElementById("btnSupport").addEventListener("click", () => {
-  showInScreen(filterByKey("Support"));
+  showInScreen(filterByKey(dataLOL, "Support"));
 })//Filtro por apoyos 
 
-// CREANDO ETIQUETA POR ETIQUETA
-/*let showImage = document.createElement("img");
-showImage.setAttribute("src", image);
-card.appendChild(showImage);
-let h3 = document.createElement("h3");
-h3.innerText = champion.title;
-card.appendChild(h3);*/
+const bringOrder = document.getElementById("order")
+bringOrder.addEventListener("change", () => {
+  let orderChampions = sortChampions(dataLOL)
+  if(bringOrder.value === "btnZA"){
+    showInScreen(orderChampions);
+  } else {
+    showInScreen(orderChampions.reverse());
+  }
+})
