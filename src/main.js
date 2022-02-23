@@ -11,6 +11,12 @@ function hidepages() {
   document.getElementById("pag3").style.display = "none";
 }
 
+document.getElementById("return").addEventListener("click", () =>{
+  document.getElementById("pag1").style.display = "block";
+  document.getElementById("pag2").style.display = "none";
+  document.getElementById("pag3").style.display = "none";
+})
+
 //Mostrar en la pagina los filtros y el orden 
 
 let bringForm = document.getElementById("cardPrincipal");
@@ -24,18 +30,20 @@ const showInScreen = (showChampion) => {
     // CREANDO CON LITERAL TEMPLATE
     card.innerHTML = `
     <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
+      <div class="cardContainer">
+        <div class="cardFront">
           <h3>${champion.name}</h3>
           <img class = "image" src = ${image}>
           <h4>${champion.title}</h4>
         </div>
-        <div class="flip-card-back">
+        <div class="cardBack">
+          <h3>Description</h3>
           <h4>${champion.blurb}</h4>
+          <h3>Level of difficulty</h3>
+          <h4>${champion.info.difficulty}</h4>
         </div>
       </div>
     </div>
-       
     `
     bringForm.appendChild(card);
   })
