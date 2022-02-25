@@ -11,6 +11,15 @@ function hidepages() {
   document.getElementById("pag3").style.display = "none";
 }
 
+document.getElementById("goals").addEventListener("click", showPag3)
+
+function showPag3() {
+  document.getElementById("pag1").style.display = "none";
+  document.getElementById("pag2").style.display = "none";
+  document.getElementById("pag3").style.display = "block";
+}
+
+
 document.getElementById("return").addEventListener("click", () =>{
   document.getElementById("pag1").style.display = "block";
   document.getElementById("pag2").style.display = "none";

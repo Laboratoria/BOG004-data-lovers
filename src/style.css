@@ -32,7 +32,6 @@ nav ul li{
 }
 nav ul{
     list-style: none;
-    /*padding-bottom: 5em;*/
     margin: 0%;
     
 }
@@ -64,7 +63,7 @@ nav ul li a {
 
 #text{
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 2%;
     
 }
@@ -98,10 +97,6 @@ nav ul li a {
     padding-right: 1em;
 
 }
-
-/* #objfinish{
-    padding-bottom: 5em;
-} */
 
 #showstatistic {
     color: white;
@@ -146,7 +141,7 @@ nav ul li a {
     padding-bottom: 10em;
 }
 
-.flip-card {
+  .flip-card {
     width: 25em;
     height: 25em;
     perspective: 1000px; 
@@ -191,7 +186,6 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
   }
 
   .image{
@@ -200,6 +194,36 @@ nav ul li a {
 
 #pag3{
     display: none;
+    color: white;
+    padding-bottom: 5em;
+}
+
+#pag3 h3{
+    font-size: 2em;
+    letter-spacing: 2px;
+    padding-left: 2em;
+}
+
+.objectives{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    border: white;
+}
+
+.objectives img{
+    width: 28em;
+    height: 25em;
+    margin: 3em;
+    border-radius: 0.5em;
+    border: 0.3em outset  #2788be;
+}
+
+.objectives p{
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    padding-right: 1em;
 }
 
 footer{
