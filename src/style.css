@@ -48,7 +48,6 @@ nav ul li a {
 }
 .containerVideo{
     overflow-x: hidden;
-    /*position: relative;*/
     -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 22%, 100% 61%, 70% 86%, 29% 86%, 0 61%, 0 22%);
     clip-path: polygon(30% 0%, 70% 0%, 100% 22%, 100% 61%, 70% 86%, 29% 86%, 0 61%, 0 22%);
     border: 1em solid #2788be;
@@ -65,22 +64,52 @@ nav ul li a {
 
 #text{
     position: absolute;
-    top: 40%;
+    top: 20%;
     left: 2%;
-    /*z-index: 2;*/
     
 }
 
 #text h4{
     color: white;
     font-size: 300%;
+    margin: 0%;
+}
+
+#resume {
+    margin: 0%;
+    top: 0%;
 }
 #resume h3{
-    color: white
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 2.5em;
+    color: white;
+    letter-spacing: 3px;
+    margin: 0%;
 }
 
 #resume p{
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 1em;
     color: white;
+    letter-spacing: 2px;
+    padding-left: 1em;
+    padding-right: 1em;
+
+}
+
+/* #objfinish{
+    padding-bottom: 5em;
+} */
+
+#showstatistic {
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Cinzel', serif;
+    padding-bottom: 7em;
+    
 }
 
 #pag2{
@@ -114,6 +143,7 @@ nav ul li a {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    padding-bottom: 10em;
 }
 
 .flip-card {
