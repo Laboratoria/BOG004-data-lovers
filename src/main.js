@@ -1,4 +1,4 @@
-import {sortChampions} from "./data.js";
+import {sortChampions, statistics1, statistics2} from "./data.js";
 import {filterByKey} from "./data.js";
 import data from './data/lol/lol.js';
 let dataLOL = Object.values(data.data);
@@ -86,3 +86,23 @@ bringOrder.addEventListener("change", () => {
     showInScreen(orderChampions.reverse());
   }
 })
+
+//const bringAverage= document.getElementById("average");
+
+// const showAverage= () =>{
+//   const div= document.createElement("div");
+//   div.setAttribute("class", "curiousFact");
+//   div.innerHTML= `
+//   <h3> Dato Curioso </h3>
+//   <p> Sabias que los campeones de League of Legends tienen un promedio de ataque de ${statistics1(dataLOL)} y ademas su promedio de daño en ataque es del ${statistics2}</p>
+//   `
+
+//   bringAverage.appendChild(div);
+// }
+
+document.getElementById("showstatistic").innerHTML="Sabias que los campeones de League of Legends tienen un promedio de ataque de " + statistics1(dataLOL) + " y ademas su promedio de daño en ataque es del " + statistics2(dataLOL)
+
+
+statistics1(dataLOL);
+statistics2(dataLOL);
+//console.log(arrayAttack);
