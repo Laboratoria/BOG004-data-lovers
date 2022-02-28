@@ -2,11 +2,147 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, inicial-scale=1.0, user-scalable=no, maximun-scale=1.0, minimun-scale=1.0">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@100;200;300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div id="root"></div>
+    <!-- Barra de navegación -->
+    <header>
+      <div class="contenedor">
+        <nav class="menu">
+          <a href="">home</a>
+          <a>about</a>
+          <a id="galery">galery</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Banner principal -->
+    <section id="Home">
+      <section class="banner">
+        <div class="logo-banner">
+          <img src="img/logo-banner.png" alt="logo estudio ghibli">
+        </div>
+      </section>
+      <!-- Resumen -->
+      <section class="resumen">         
+          <div class="texto-resumen">
+            <h1>STUDIO GHIBLI....</h1>
+            <p>The Studio Ghibli (スタジオジブリ Sutajio Jiburi) is a Japanese animation studio, based in Tokyo. It was founded in 1985 by Hayao Miyazaki and Isao Takahata, and to date, they have made more than 20 films, in addition to other types of work (short films, commercials. They have the respect of the Japanese public and also the international one, where the critics and the animation sector show them a lot of respect. Due to its popularity, the Ghibli Museum was opened, which is located on the outskirts of Tokyo and Ghibli Park is expected to be ready by 2022.</p>
+          </div>
+          <div class="logo-principal">
+             <img src="img/logoTotoro.png" alt="logo totoro">
+          </div>        
+      </section>
+    </section>
+
+    <!-- Panel redes -->
+    <section class="redes-sociales">
+      <a href="https://www.facebook.com/groups/333477338223892"><img src="img/jam_facebook.png" alt="facebook" class="icono-redes"></a>
+      <a href="https://twitter.com/"><img src="img/Group.png" alt="twiter" class="icono-redes"></a>
+      <a href="https://www.instagram.com/ghibliuk/"><img src="img/Vector (1).png" alt="instagram" class="icono-redes"></a>
+      <a href="https://web.whatsapp.com/"><img src="img/Vector.png" alt="wpp" class="icono-redes"></a>
+    </section>
+
+    <!-- Animaciones -->
+    <section id="galeria-animaciones">
+
+    <!-- Panel de busqueda -->
+      <div id="entrada-busqueda">
+        <input type="search" id="input-filtro" placeholder="Buscar animación....">
+
+        <a href="" type="button"><img src="img/ci_filter.png" alt="filtro" class="icono-filtros" id="boton-filtrar"></a>
+      </div>
+
+    <!-- Panel de Filtros -->
+      <div class="filtros-busqueda">
+        <a href=""><img src="img/Vector (2).png" alt="alfabeticamente" class="icono-filtros" id="ordenar-az" title="Ordenar Alfabéticamente" tooltip-dir="left"></a>
+        <a href=""><img src="img/Vector (3).png" alt="cronologicamente" class="icono-filtros" id="ordenar-fecha" title="Ordenar Cronológicamente" tooltip-dir="left"></a>
+      </div> 
+
+    <!-- Galería de peliculas -->      
+      <div id="animaciones">
+      </div>    
+      
+    </section>
+
+
+    <section id="pag-informacion-peliculas">
+      
+      <div id="poster-descripcion">
+        <div class="poster-principal">
+          <img src="img/Totoro.png" alt="poster-pelicula"/>
+        </div>
+       
+        <div class="texto-descripcion">
+          <li>Title:</li>
+          <li>Director:</li>
+          <li>Producer:</li>
+          <li>Release Date:</li>
+          <li>Rt_score:</li>
+        </div>
+      </div>
+      
+      <div class="btn-location-vehicles-personajes">
+
+        <button class="button button1">Character</button>
+        <button class="button button1">Location</button>
+        <button class="button button1">Vehicles</button>
+
+      </div>
+     
+<!-- Carrusel -->     
+
+  <div class="img-slider__container-1">
+    
+    <div class="img-items">
+        <img src="https://via.placeholder.com/200?text=1" alt="" class="img-carrusel">
+    </div>
+    <div class="img-items">
+        <img src="https://via.placeholder.com/200?text=2" alt="" class="img-carrusel">
+    </div>
+    <div class="img-items">
+        <img src="https://via.placeholder.com/200?text=3" alt="" class="img-carrusel">
+    </div>
+    <div class="img-items">
+        <img src="https://via.placeholder.com/200?text=4" alt="" class="img-carrusel">
+    </div>
+    <div class="img-items">
+        <img src="https://via.placeholder.com/200?text=5" alt="" class="img-carrusel">
+    </div>
+    <div class="img-items">
+        <img src="https://via.placeholder.com/200?text=6" alt="" class="img-carrusel">
+    </div>
+    <div class="img-items">
+        <img src="https://via.placeholder.com/200?text=7" alt=""
+        class="img-carrusel" >
+    </div>
+    <div class="img-items">
+      <img src="https://via.placeholder.com/200?text=9" alt="" class="img-carrusel" >
+    </div>
+    <div class="img-items">
+      <img src="https://via.placeholder.com/200?text=10" alt="" class="img-carrusel" >
+    </div>    
+    <div class="img-items">
+      <img src="https://via.placeholder.com/200?text=11" alt="" class="img-carrusel" >
+    </div>
+</div>
+
+    </section>
+   
+
+    <!-- pie de página -->
+    <footer class="texto-footer">
+        <p>Wiki Studio Ghibli Made By Francy Corredor y Lizeth Rodriguez</p>
+    </footer>
     <script src="main.js" type="module"></script>
   </body>
 </html>
+  
