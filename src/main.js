@@ -65,7 +65,6 @@ fetch('./data/ghibli/ghibli.json')
             // e nos trae un objeto (esta la informacioninterna que contiene el navegador)del cual vamos a extraer el target que es el dato que contiene el id de ese elemento, y el tagname nos devuelve el nombre del elemento que estamos seleccionando para hacer la comparacion
 
     function captura_click(e){
-        console.log(e. )
         if(e.target.tagName === 'BUTTON'){
             const idFilm = e.target.id
             const filmBusqueda = peliculas.filter(pelicula => idFilm === pelicula.id)
@@ -89,11 +88,12 @@ fetch('./data/ghibli/ghibli.json')
         document.getElementById('Home').style.display = 'none';
     }
 
-    function mostrarInfoPeli (filmBusqueda){ 
+    function mostrarInfoPeli (filmBusqueda){
         document.getElementById('galeria-animaciones').style.display = 'none';
         document.getElementById('pag-informacion-peliculas').style.display = 'flex';
 
-        const { 
+        const {
+            id : idFilm,
             poster, 
             title,
             director,
@@ -137,30 +137,120 @@ fetch('./data/ghibli/ghibli.json')
         const selectBtnLocation = document.getElementById("btnLocation")
         const selectBtnVehicles = document.getElementById("btnVehicles")
 
-        mostrarCarrusel(people)
+        mostrarCarrusel(people, idFilm)
 
         selectBtnCharacters.addEventListener("click", function(){
-            mostrarCarrusel(people)
+            mostrarCarrusel(people, idFilm)
         })
-        selectBtnLocation.addEventListener("click", () => mostrarCarrusel(locations))
-        selectBtnVehicles.addEventListener("click", () => mostrarCarrusel(vehicles))
+        selectBtnLocation.addEventListener("click", () => mostrarCarrusel(locations, idFilm))
+        selectBtnVehicles.addEventListener("click", () => mostrarCarrusel(vehicles, idFilm))
 
         // debido a que se va a enviar un parametro a la funcion mostrarcarrusel que esta dentro del addEven Listener es necesario enviarlo como callback porque de lo contrario se va a ejecutar automaticamente sin esperar el click
     } 
 
-    function mostrarCarrusel(info) {
+    function mostrarCarrusel(infoParaCarrousel, idFilm) {
         let viewCarrusel = `<div class="img-slider__container-1">`
-        info.forEach(i => {
+        infoParaCarrousel.forEach(i => {
             viewCarrusel += `
                 <div class="img-items">
-                    <img src=${i.img} alt="" class="img-carrusel">
+                    <img id="${i.id}" src=${i.img} alt="" class="img-carrusel"/>
                 </div>
             `
         })
         viewCarrusel += `</div>`
         const carrouselSection = document.getElementById("carrousel-section")
         carrouselSection.innerHTML = viewCarrusel
+
+
+        let personajes = carrouselSection.querySelectorAll(".img-carrusel");
+
+        personajes.forEach(personaje=>{
+            personaje.addEventListener("click", function (e) {
+                return captura_personaje (e, infoParaCarrousel, idFilm)
+            })
+        })
     }
+
+// pagina people prueba
+
+function captura_personaje(e, infoParaCarrousel, idFilm){
+    // if(e.target.tagName === 'img'){
+    const idInfoParaCarrousel = e.target.id
+    const busqueda = infoParaCarrousel.filter(itemCarrousel => idInfoParaCarrousel === itemCarrousel.id)
+        
+        mostrarDetallePersonaje(busqueda, idFilm)
+   // }
+
+
+    function mostrarDetallePersonaje(info, idFilm){
+
+        document.getElementById('galeria-animaciones').style.display = 'none';
+        document.getElementById('pag-informacion-peliculas').style.display = 'none';
+        document.getElementById('pagina-individual-seleccion').style.display = 'flex';
+       
+        //EXTRAER LA URL DEL POSTER DE LA PELICULA
+        const film = peliculas.filter(pelicula => pelicula.id === idFilm) || null
+        
+        const {poster} = film[0] || []
+        
+        const {
+            name,
+            img,
+            gender,
+            age,
+            eye_color,
+            hair_color,
+            specie,
+            climate,
+            terrain,
+            surface_water,
+            residents,
+            description,
+            vehicle_class,
+            length
+        } = info[0] || [];
+
+        const peopleView = `
+                <div id="poster-descripcion">
+
+                <div class="poster-principal">
+                <img src="${poster}" alt="poster-pelicula"/>
+                </div>
+        
+                <div class="texto-descripcion">
+                <li>Name:${name} </li>
+                ${gender ? `<li>Gender: ${gender}</li>` : ``}
+                ${age ? `<li>Age: ${age}</li>` : ``}
+                ${eye_color ? `<li>Eye Color: ${eye_color}</li>`: ``}
+                ${hair_color ? `<li>Hair Color: ${hair_color}</li>`: ``}
+                ${specie ? `<li>Specie: ${specie}</li>`: ``}
+                ${climate ? `<li>Climate: ${climate}</li>`: ``}
+                ${terrain ? `<li>Terrain: ${terrain}</li>` : ``}
+                ${surface_water ? `<li>Surface Water: ${surface_water}</li>`: ``}
+                ${residents ? `<li>Residents: ${residents}</li>` : ``}
+                ${description ? `<li>Description: ${description}</li>` : ``}
+                ${vehicle_class ? `<li>Vehicle Class: ${vehicle_class}</li>`: ``}
+                ${length ? `<li>Lenght: ${length}</li>` : ``}
+                </div>
+            
+                <div class="poster-personaje">
+                <img src=${img} alt="poster-personaje"/>
+                </div>
+                
+            </div> 
+        `
+        const selectInfoPelicula = document.getElementById("pagina-individual-seleccion")
+        selectInfoPelicula.innerHTML = peopleView
+
+        }
+    }
+
+
+
+
+    
+
+
 
     //  funciones para data
 
@@ -184,5 +274,4 @@ fetch('./data/ghibli/ghibli.json')
         let peliculasOrdenadasxAño = peliculasxAño(peliculas)
         iterarPelicula(peliculasOrdenadasxAño)
     }
-
     
