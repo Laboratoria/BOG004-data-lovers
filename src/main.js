@@ -46,7 +46,7 @@ fetch('./data/ghibli/ghibli.json')
                             <h1 id="title">${pelicula.title}</h1> 
                             <p id="rel ease_date">${pelicula.release_date}</p> 
                             <p class="description" id="description">${pelicula.description}</p>
-                            <button id="${pelicula.id}">Ver Detalles</button>
+                            <button class='btn-seleccion' id="${pelicula.id}">Ver Detalles</button>
                         </div>
                     </div>
                 </div>
@@ -86,11 +86,14 @@ fetch('./data/ghibli/ghibli.json')
     function mostrarAnimaciones (){
         document.getElementById('galeria-animaciones').style.display = 'flex';
         document.getElementById('Home').style.display = 'none';
+        document.getElementById('pagina-individual-seleccion').style.display = 'none';
+
     }
 
     function mostrarInfoPeli (filmBusqueda){
         document.getElementById('galeria-animaciones').style.display = 'none';
         document.getElementById('pag-informacion-peliculas').style.display = 'flex';
+        
 
         const {
             id : idFilm,
@@ -244,12 +247,6 @@ function captura_personaje(e, infoParaCarrousel, idFilm){
 
         }
     }
-
-
-
-
-    
-
 
 
     //  funciones para data
