@@ -44,6 +44,11 @@ body{
     align-items: center;
 }
 
+.img-charts{
+    width: 50px;
+    justify-content: center;
+}
+
 /* Pantalla 1 */
 /* Banner principal */
 
@@ -284,7 +289,6 @@ body{
     width: 30px;
 }
 
-
 /* Sección pelicula individual */
 
 #pag-informacion-peliculas{
@@ -379,11 +383,11 @@ body {
 }
 .img-slider__container-1 {
     display: flex;
-    column-gap:0px;
+    column-gap: 0px;
     width: 100%;
-    overflow-x:scroll;
-    text-align: center;
-    justify-content: center;
+    overflow-x:auto;
+    text-align: start;
+    justify-content: flex-start;
     align-items: center;
     padding: 70px;
     overflow-y:hidden;

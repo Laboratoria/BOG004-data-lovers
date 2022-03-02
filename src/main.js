@@ -1,5 +1,5 @@
 //Imports
-import {filtrarPeliculas, organizarPeliculasAZ, peliculasxAño} from './data.js'
+import {filtrarPeliculas, organizarPeliculasAZ, peliculasxAño, filtrarPeliculasScore} from './data.js'
 
 
 //Variables y constantes
@@ -9,6 +9,8 @@ let galeria = document.getElementById('galery');
 let btn_filtrar = document.getElementById("boton-filtrar");
 let btn_AZ = document.getElementById("ordenar-az");
 let btn_Cronologia = document.getElementById("ordenar-fecha");
+let about = document.getElementById('about');
+let topAnimations = document.getElementById('filtro-animaciones');
 
 //console.log(posterPelis);
 
@@ -17,7 +19,8 @@ galeria.addEventListener('click', mostrarAnimaciones);
 btn_filtrar.addEventListener("click",traerNombreInput);
 btn_AZ.addEventListener("click",OrdenarAlfabeticamenteAaZ); 
 btn_Cronologia.addEventListener("click",OrdenarCronologicamente);
-
+about.addEventListener('click', mostrarAbout);
+topAnimations.addEventListener('click', OrdenarScore)
 
 fetch('./data/ghibli/ghibli.json')
     .then(response => response.json())
@@ -81,18 +84,29 @@ fetch('./data/ghibli/ghibli.json')
     document.getElementById('galeria-animaciones').style.display = 'none';
     document.getElementById('pag-informacion-peliculas').style.display = 'none';
     document.getElementById('pagina-individual-seleccion').style.display = 'none';
+    document.getElementById('myChart').style.display = 'none';
 
 
     function mostrarAnimaciones (){
         document.getElementById('galeria-animaciones').style.display = 'flex';
         document.getElementById('Home').style.display = 'none';
         document.getElementById('pagina-individual-seleccion').style.display = 'none';
+        document.getElementById('myChart').style.display = 'none';
+
+    }
+
+    function mostrarAbout (){
+        document.getElementById('galeria-animaciones').style.display = 'none';
+        document.getElementById('Home').style.display = 'block';
+        document.getElementById('pagina-individual-seleccion').style.display = 'none';
+        document.getElementById('myChart').style.display = 'none';
 
     }
 
     function mostrarInfoPeli (filmBusqueda){
         document.getElementById('galeria-animaciones').style.display = 'none';
         document.getElementById('pag-informacion-peliculas').style.display = 'flex';
+        document.getElementById('myChart').style.display = 'none';
         
 
         const {
@@ -271,4 +285,11 @@ function captura_personaje(e, infoParaCarrousel, idFilm){
         let peliculasOrdenadasxAño = peliculasxAño(peliculas)
         iterarPelicula(peliculasOrdenadasxAño)
     }
+
+    function OrdenarScore (event){
+        event.preventDefault();
+        let theBestAnimations = filtrarPeliculasScore(peliculas)
+        iterarPelicula(theBestAnimations)
+    }
     
+
