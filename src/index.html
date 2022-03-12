@@ -1,69 +1,66 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8">
-  <title>Data Lovers</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/7a7c43091d.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-  <header class="header">
-    <nav class="nav">
-      <img class="logo" src="https://i.imgur.com/BoiN8Gk.png" alt="Logo de estudio
-    ghibli">
-      <h1>Studio Ghibli</h1>
-      <button class="nav-toggle" aria-label="Abrir menú">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-      <ul class="nav-menu">
-        <li class="nav-menu-item">
-          <button id="inicio" class="nav-menu-link">Inicio</button>
-        </li>
-        <li class="nav-menu-item">
-          <button id="animaciones" class="nav-menu-link">Animaciones</button>
-        </li>
-        <li class="nav-menu-item">
-          <button id="animaciones-populares" class="nav-menu-link">Más populares</button>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <div id="pantalla-principal">
-    <p id="parrafo1" class="parrafo">El nombre del estudio proviene de Ghibli, palabra con que Italia bautizó a los
+ <head>
+   <meta charset="utf-8">
+   <title>Data Lovers</title>
+   <link rel="stylesheet" href="style.css" />
+   <script src="https://kit.fontawesome.com/7a7c43091d.js" crossorigin="anonymous"></script>
+ </head>
+ <body>
+   <header class="header">
+     <nav class="nav">
+       <img class="logo" src="https://i.imgur.com/BoiN8Gk.png" alt="Logo de estudio
+       ghibli">
+       <h1>Studio Ghibli</h1>
+        <button class="nav-toggle" aria-label="Abrir menú">
+         <!--VERIFICAR-->
+         <i class="fa-solid fa-bars"></i>
+        </button>
+        <!--VERIFICAR-->
+        <ul class="nav-menu">
+           <li class="nav-menu-item">
+             <button id="inicio" class="nav-menu-link">Inicio</button>
+           </li>
+           <li class="nav-menu-item">
+             <button id="animaciones" class="nav-menu-link">Animaciones</button>
+           </li>
+           <li class="nav-menu-item">
+             <button id="animaciones-populares" class="nav-menu-link">Más populares</button>
+           </li>
+        </ul>
+     </nav>
+    </header> 
+    <div id="pantalla-principal">
+      <p id="parrafo1" class="parrafo">El nombre del estudio proviene de Ghibli, palabra con que Italia bautizó a los
       aviones que volaban sobre el Sahara
       durante la Segunda Guerra Mundial, y que a su vez proviene del término arábico que describe al viento cálido del
       desierto en Libia. Studio Ghibli es un estudio de animación japonés, conocido por sus largometrajes
       animados como
       <span>Mi vecino Totoro</span>, <span>El viaje de Chihiro</span> o <span>El castillo ambulante</span>, entre otros
       grandes éxitos.
-    </p>
-    <p id="parrafo2" class="parrafo espaciado">La fama y prestigio del estudio es tal, que algunos de sus personajes son
+     </p>
+     <p id="parrafo2" class="parrafo espaciado">La fama y prestigio del estudio es tal, que algunos de sus personajes son
       absolutos íconos de la cultura popular
       japonesa, lo que llevó al equipo comandado por Miyazaki a abrir un museo en Mitaka, Tokio, en donde se proyectan
       cortos animados que no se pueden ver en ningún otro lugar que, como es de esperar, es frecuentemente visitado por
-      un
-      altísimo volumen de fanáticos tanto locales como extranjeros.
-    </p>
-    <div id="parrafo-promedio3">
+      un altísimo volumen de fanáticos tanto locales como extranjeros.
+     </p>
+     <div id="parrafo-promedio3"></div>
+      <img id="imagen-inicio" class="imagen1" src="https://i.imgur.com/L1rXTQV.png"
+      alt="Las animaciones de estudio ghibli y los años en que se estrenaron"/>
     </div>
-    <img id="imagen-inicio" class="imagen1" src="https://i.imgur.com/L1rXTQV.png"
-      alt="Las animaciones de estudio ghibli y los años en que se estrenaron" />
-  </div>
-  <div id="pantalla-animaciones">
-    <select id="selectOrdenar" class="boton-ordenar">
-      <option class="ordenar" value="original">Seleccionar</option>
-      <option class="ordenar" value="az">A - Z</option>
-      <option class="ordenar" value="za">Z - A</option>
-    </select>
-  </div>
-  <div id="pantalla-contenedor">
-    <div id="contenedor-grupo"></div>
-  </div>
-  <script src="main.js" type="module"></script>
-  <footer>
-  </footer>
-</body>
-
-</html>
+    <div id="pantalla-animaciones">
+      <select id="selectOrdenar" class="boton-ordenar">
+         <option class="ordenar" value="original">Seleccionar</option>
+         <option class="ordenar" value="az">A - Z</option>
+         <option class="ordenar" value="za">Z - A</option>
+      </select>
+    </div>
+    <div id="pantalla-contenedor">
+      <div id="contenedor-grupo"></div>
+    </div>
+    <footer id="pie-pagina">
+    </footer>
+   <script src="main.js" type="module"></script>
+  </body>
+</html> 
