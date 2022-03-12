@@ -12,8 +12,9 @@ const contenedor = document.getElementById("contenedor-grupo");
 const ordenar = document.getElementById("selectOrdenar");
 const verMas = document.getElementsByClassName("ver-mas");
 const verMenos = document.getElementsByClassName("ver-menos");
+const piePagina1 = document.getElementById("pie-pagina");
 /** Funciones o métodos*/
-//estructura de las cards
+//estructura de las cards.
 function pintarTarjeta(data) {
   let grupoTarjeta = "";
   data.forEach((element) => {
@@ -36,13 +37,24 @@ function pintarTarjeta(data) {
   });
   contenedor.innerHTML = grupoTarjeta;
 }
-//parrafo del promedio, funcion calculo. 
+//parrafo del promedio, funcion calculo.
 let resultadoPromedio = calcularPromedio(dataGhibli);
 let parrafoPromedio = document.getElementById("parrafo-promedio3");
-let parrafo3Prom= ` 
-<p id="parrafo3" class="parrafo espaciado"> El promedio que le dan a las animaciones de Studio Ghibli es: ${ resultadoPromedio } </p>
+let parrafo3Prom= `
+<p id="parrafo3" class="parrafo espaciado"> El promedio que le dan a las animaciones de Studio Ghibli es: <span>${ resultadoPromedio }</span></p>
 `;
-parrafoPromedio.innerHTML=parrafo3Prom; 
+parrafoPromedio.innerHTML=parrafo3Prom;
+// estructura del pie de pagina.
+let piePagina = `
+ <small>&copy; 2022 Hecho por: Dannit Hernandez y Elizabeth Echavarria - Todos los Derechos
+  Reservados.</small>
+ <div class="redes-sociales">
+   <i class="fa-brands fa-facebook"></i>
+   <i class="fa-brands fa-instagram"></i>
+   <i class="fa-brands fa-youtube"></i>
+  </div>
+`;
+piePagina1.innerHTML = piePagina;
 //Botón ver más
 const clickearVerMas = () => {
   for (let i = 0; i < verMas.length; i++) {
@@ -52,7 +64,10 @@ const clickearVerMas = () => {
       verMas[i].style.display = "none";
       verMenos[i].style.display = "block";
       let descripcionCompleta = document.getElementsByClassName("text-description")[i];
+      // descripcionCompleta.style.background = "yellow";
       descripcionCompleta.style.webkitLineClamp = "25"
+      console.log(descripcionCompleta);
+      // descripcionCompleta.setAttribute("class", "text-descriptioncompleta");
     });
   }
 };
@@ -65,7 +80,10 @@ const clickearVerMenos = () => {
       verMas[i].style.display = "block";
       verMenos[i].style.display = "none";
       let descripcionCompleta = document.getElementsByClassName("text-description")[i];
+      // descripcionCompleta.style.background = "yellow";
       descripcionCompleta.style.webkitLineClamp = "3"
+      console.log(descripcionCompleta);
+      // descripcionCompleta.setAttribute("class", "text-descriptioncompleta");
     });
   }
 };
@@ -73,13 +91,13 @@ const clickearVerMenos = () => {
 //evento del menu inicio
 btnInicio.addEventListener("click", () => {
   pantallaPrincipal.style.display = "block";
-  pantallaAnimaciones.style.display = "none"
-  pantallaContenedor.style.display = "none"
+  pantallaAnimaciones.style.display = "none";
+  pantallaContenedor.style.display = "none";
 });
 //evento del menu animaciones
 btnAnimaciones.addEventListener("click", () => {
   pintarTarjeta(dataGhibli);
-  pantallaPrincipal.style.display = "none"
+  pantallaPrincipal.style.display = "none";
   pantallaAnimaciones.style.display = "block";
   pantallaContenedor.style.display = "block";
   ordenar.value = "original"
@@ -121,4 +139,3 @@ navToggle.addEventListener("click", () => {
     navToggle.setAttribute("aria-label", "Abrir menú");
   }
 });
-
