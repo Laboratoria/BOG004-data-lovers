@@ -1,4 +1,4 @@
-import { datosOrdenados, filtrarDatos,calcularPromedio} from '../src/data.js';
+import { datosOrdenados, filtrarDatos,calcularPromedio } from '../src/data.js';
 const dataPrueba = [
   {"title": "Castle in the Sky", "rt_score": "95"},
   {"title": "My Neighbor Totoro", "rt_score": "93"},

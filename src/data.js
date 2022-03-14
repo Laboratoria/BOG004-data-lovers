@@ -10,7 +10,6 @@ export const datosOrdenados = (arregloGhibli) => {
  export const filtrarDatos = (arrayanimaciones) => {
    const arrayFiltrado = arrayanimaciones.filter(
      (animaciones) => parseInt(animaciones.rt_score) >= 96
-    
    );
    console.log(arrayFiltrado)
    return arrayFiltrado; 
