@@ -1,12 +1,13 @@
 /*barra de navegación del menú*/
 * {
-  margin: 0;
-  box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 body {
+  margin: 0;
+  padding:0;
   font-family: sans-serif;
-  padding: 90px 20px 0;
+  /*padding: 90px 20px 0;*/
   background-color: rgb(248, 248, 220);
 }
 
@@ -18,41 +19,48 @@ body {
   top: 0;
   left: 0;
   z-index: 1;
+  border:solid 2px red; 
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
-  max-width: 992px;
-  margin: 0 auto;
+  /*max-width: 992px;*/
+  padding: 0px 50px 0px 50px;
+  border:solid 2px rgb(7, 7, 7); 
 }
 
 .logo {
   width: 15%;
   height: 60px;
   margin-top: 10px;
+  border:solid 2px rgb(241, 100, 6); 
 }
 
 h1 {
   font-size: 22px;
   font-weight: bold;
   margin-right: 255px;
-  line-height: 80px;
+  /*line-height: 80px;*/
+  margin-bottom: 30px;
   text-transform: uppercase;
   color: rgb(248, 237, 237);
   width: max-content;
+  border:solid 2px rgb(248, 245, 53); 
 }
 
 .nav-menu {
   display: flex;
   margin-right: 0px;
   list-style: none;
+  border:solid 2px rgb(190, 248, 53); 
 }
 
 .nav-menu-item {
   margin: 4px;
-  line-height: 80px;
+  /*line-height: 80px;*/
   width: max-content;
+  border:solid 2px rgb(248, 53, 160); 
 }
 
 .nav-menu-link {
@@ -61,6 +69,7 @@ h1 {
   background-color: rgb(97, 173, 248); ;
   color: rgb(248, 237, 237);
   font-size: 18px
+  border solid 2px rgb(203, 53, 248); 
  }
 
 .nav-menu-link:hover,
@@ -112,13 +121,13 @@ h1 {
 /*pantalla animaciones*/
 #contenedor-grupo {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  width: 1200px;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100vw;
   gap: 15px;
-  margin-top: 20px;
+  /*margin-top: 20px;
   margin-bottom: 20px;
   left: 58px;
-  position: relative;
+  position: relative;*/
  }
 
 .contenedor-padre {
@@ -127,9 +136,9 @@ h1 {
   margin: auto;
   padding: 10px 30px;
   border-radius: 2%;
-  border: 1px solid orangered;
+  /*border: 1px solid orangered;
   transition: all 0.1s ease-in-out;
-  box-shadow: 0px 1px 10px 0px orangered;
+  /*box-shadow: 0px 1px 10px 0px orangered;*/
   text-align: center;
   background: linear-gradient(-135deg, rgb(77, 154, 231), rgb(77, 245, 77));
 }
@@ -224,6 +233,11 @@ h1 {
 .card-text .ver-mas {
   cursor: pointer;
 }
+
+/*pantalla mas populares*/
+#pantalla-contenedor{
+  min-height: 97vh;
+}
 /*para ocultar la lista desplegable de la pantalla de inicio*/
 #pantalla-animaciones{
   display: none;
@@ -241,14 +255,14 @@ h1 {
 /*pie de pagina*/
 #pie-pagina {
   background-color: rgb(87, 170, 253);
-  width: 100%;
+  width: 100vw;
   height: 50px;
   padding: 15px 25px;
   color:  black;
   font-size: 17px;
   display: flex;
-  position: absolute;
-  left: 0;
+  /*position: absolute;*/
+  margin: 0;
   }
 
 #pie-pagina .redes-sociales i {
@@ -263,201 +277,7 @@ h1 {
 }
 
 @media (max-width: 768px) {
-  /*barra de navegación del menú responsive*/
-  body {
-    padding-top: 70px;
-  }
-
-  .header {
-    height: 74px;
-  }
-
-  .logo {
-    width: 17%;
-    height: 50px;
-    position: relative;
-    left: 90px;
-    top: 1px;
-  }
-
-  h1 {
-    font-size: 18px;
-    line-height: 74px;
-    margin-right: 100px;
-  }
-
-  .nav-menu {
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(248, 248, 220);
-    position: fixed;
-    left: 0;
-    top: 80px;
-    width: 100%;
-    padding: 20px 0;
-
-    height: calc(100% - 74px);
-    overflow-y: auto;
-
-    left: 100%;
-    transition: left 0.1s;
-  }
-
-  .nav-menu-item {
-    font-size: 12px;
-  }
-
-  .nav-link {
-    font-size: 16px;;
-  }
-
-  .nav-menu-link:hover,
-  .nav-menu-link_active {
-    background: rgb(97, 173, 248);
-    color: white;
-    transition: 0.5s;
-    box-shadow: 0px 1px 20px 0px rgb(21, 205, 0);
-    border: solid 0px rgb(21, 255, 0);
-  }
-
-  .nav-toggle {
-    display: block;
-  }
-
-  .nav-menu_visible {
-    left: 0;
-  }
- /*pantalla principal*/
-  .parrafo {
-    font-size: 15px;
-    margin-top: 20px;
-  }
-
-  .imagen1 {
-    max-width: 85%;
-    max-height: 55%;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    display: block;
-    padding-left: 8px;
-  }
- /*pantalla animaciones*/
- .boton-ordenar {
-  margin-top: 20px;
- }
- /*pie de pagina*/
- #pie-pagina {
-  width: 100%;
-  height: 45px;
-  padding: 10px 20px;
-  font-size: 13px;
-  display: flex;
-  position: absolute;
-  left: 0;
-  }
-
-  #pie-pagina .redes-sociales i {
-    transition: all 300ms ease;
-    margin-left: 15px; 
-  }
-  
-  #pie-pagina .redes-sociales i:hover {
-    color: rgb(248, 237, 237);
-  }
+.h1{
+  margin-right: 15px;
 }
-
-@media (max-width: 600px) {
-  /*barra de navegación del menú responsive*/
-  body {
-    padding-top: 70px;
-  }
-
-  .header {
-    height: 70px;
-  }
-
-  .logo {
-    width: 17%;
-    height: 50px;
-    position: relative;
-    left: 30px;
-    top: 0px;
-  }
-
-  h1 {
-    font-size: 15px;
-    line-height: 70px;
-    margin-right: 13px;
-  }
-
-  .nav-menu {
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(248, 248, 220);
-    position: fixed;
-    left: 0;
-    top: 80px;
-    width: 100%;
-    padding: 20px 0;
-    height: calc(100% - 70px);
-    overflow-y: auto;
-    left: 100%;
-    transition: left 0.1s;
-  }
-
-  .nav-menu-item {
-    line-height: 70px;
-    font-size: 12px;
-  }
-
-  .nav-link {
-    color: rgb(189, 104, 104);
-    text-decoration: none;
-  }
-
-  .nav-menu-link:hover,
-  .nav-menu-link_active {
-    background: rgb(97, 173, 248);
-    color: white;
-    transition: 0.5s;
-    box-shadow: 0px 1px 20px 0px rgb(21, 205, 0);
-    border: solid 0px rgb(21, 255, 0);
-  }
-
-  .nav-toggle {
-    display: block;
-  }
-
-  .nav-menu_visible {
-    left: 0;
-  }
- /*pantalla principal*/
-  .parrafo {
-    font-size: 14px;
-    margin-top: 50px;
-  }
- /*pantalla animaciones*/
- .boton-ordenar {
-  margin-top: 20px;
- }
-/*pie de pagina*/
-#pie-pagina {
-  width: 100%;
-  height: 38px;
-  padding: 15px 20px;
-  font-size: 7px;
-  display: flex;
-  position: absolute;
-  left: 0;
-  }
-
-  #pie-pagina .redes-sociales i {
-    transition: all 300ms ease;
-    margin-left: 5px; 
-  }
-  
-  #pie-pagina .redes-sociales i:hover {
-    color: rgb(248, 237, 237);
-  }
 }
