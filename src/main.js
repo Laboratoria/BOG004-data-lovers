@@ -66,7 +66,7 @@ const clickearVerMas = () => {
       let descripcionCompleta = document.getElementsByClassName("text-description")[i];
       // descripcionCompleta.style.background = "yellow";
       descripcionCompleta.style.webkitLineClamp = "25"
-      console.log(descripcionCompleta);
+      //console.log(descripcionCompleta);
       // descripcionCompleta.setAttribute("class", "text-descriptioncompleta");
     });
   }
@@ -82,7 +82,7 @@ const clickearVerMenos = () => {
       let descripcionCompleta = document.getElementsByClassName("text-description")[i];
       // descripcionCompleta.style.background = "yellow";
       descripcionCompleta.style.webkitLineClamp = "3"
-      console.log(descripcionCompleta);
+      //console.log(descripcionCompleta);
       // descripcionCompleta.setAttribute("class", "text-descriptioncompleta");
     });
   }
